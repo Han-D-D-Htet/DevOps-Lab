@@ -1,8 +1,6 @@
 name: A workflow for my Hello World App
 on: push
 permissions:
-    contents: write
-    pull-requests: write
     repository-projects: write
 jobs:
   UnitTests:
@@ -43,6 +41,6 @@ jobs:
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: false
-          automatic_release_tag: "v0.1.0.5"
+          automatic_release_tag: "v0.1.0.6"
           files: |
             ./target/*.jar
